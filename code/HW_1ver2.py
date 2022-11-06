@@ -4,23 +4,19 @@ import numpy as np
 from functools import reduce
 
 
-def lagrange(x ,x_ar ,y_ar,length ):
-    b = np.multiply(np.array(y_ar, dtype=np.float64),np.full((1,length),-1,np.float64))#np.add(np.multiply(np.array(y_ar),np.full((1,length),-1)),np.full((1,length),y[length])) # b = [y]
-    Li = []
-    for o,oo in enumerate(x) :
-        sum = 0 
-        for i in range(length):
-            a = np.array(x_ar, dtype=np.float64) #  a = [x]
-            temp1 = np.subtract(np.full((1,length),a[i],np.float64),a) #temp = [x_0] - [x]
-            temp1 = reduce(lambda a,b : a*b, temp1[temp1!=0])
-            temp2 = np.subtract(np.full((1,length),oo),a) #temp = x - [x]
-            temp2 = np.append(temp2[:,0:i],temp2[:,i+1:length])
-            temp2 = reduce(lambda a,b: a*b ,temp2)
-            L = temp2/temp1
-            L *= b[:,i] ; sum += L
-        Li += [sum]
-        #print(Li)
+def lagrange_poly(x_ar ,y_ar) :
+    Li = np.poly1d)
+    for (i,j) in enumerate(x_ar) :
+        #print(x_ar[0:i]+x_ar[i+1:])
+        temp1 = np.poly1d(x_ar[0:i]+x_ar[i+1:],True)
+        temp2 = list(map(lambda a : j-a,x_ar[0:i]+x_ar[i+1:])) 
+        temp2 = reduce(lambda a,b : a*b,temp2)
+        tempLi = temp1/temp2
+        tempLi*= y_ar[i]
+        Li += tempLi
     return Li
+
+
 
 
 up_path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary.png"
@@ -55,27 +51,35 @@ for x in range(width):
 #########up###########
 x = [] ; y = []
 for i,j  in (up_plane) : # mapping x -> y 
-    if i % 10 == 0 :
+    if i % 20 == 0 :
         x += [i/10]
-        y += [j+30]
+        y += [(-j+250)]
 
-#x = list(map(lambda i : i - x[0] , x)) #左移
-x_res = np.arange(x[0],x[len(x)-1]+1)
-y_res = lagrange(x_res, x,y,len(x))
-#plt.plot(x, y)
-plt.plot(x_res, y_res)
+x = list(map(lambda i : i - x[0] , x)) #左移
 
+
+print("up:",lagrange_poly(x,y))
+x_res = np.arange(100) 
+y_res = lagrange_poly(x,y)(x_res)
+
+plt.plot(x_res,y_res)
 
 ##########down##########
 x = [] ; y = []
 for i,j  in (down_plane) : # mapping x -> y 
-    if i % 10 == 0 :
+    if i % 20 == 0 :
         x += [i/10]
-        y += [j]
-x_res = np.arange(x[0],x[len(x)-1]+1)
-y_res = lagrange(x_res, x,y,len(x))
-#plt.plot(x, y)
-plt.plot(x_res, y_res)
+        y += [(-j+250)/10]
+print("down:",lagrange_poly(x,y))
+#print(x,y)
+x = list(map(lambda i : i - x[0] , x)) #左移
+x_res = np.linspace(0,115,1)
+y_res = lagrange_poly(x,y)(x_res)
+plt.plot(x_res,y_res)
+
+
+
+
 
 plt.show()
 print("HELLO")

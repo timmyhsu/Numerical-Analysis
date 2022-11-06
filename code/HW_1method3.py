@@ -4,25 +4,6 @@ import numpy as np
 from functools import reduce
 
 
-def lagrange(x ,x_ar ,y_ar,length ):
-    b = np.multiply(np.array(y_ar, dtype=np.float64),np.full((1,length),-1,np.float64))#np.add(np.multiply(np.array(y_ar),np.full((1,length),-1)),np.full((1,length),y[length])) # b = [y]
-    Li = []
-    for o,oo in enumerate(x) :
-        sum = 0 
-        for i in range(length):
-            a = np.array(x_ar, dtype=np.float64) #  a = [x]
-            temp1 = np.subtract(np.full((1,length),a[i],np.float64),a) #temp = [x_0] - [x]
-            temp1 = reduce(lambda a,b : a*b, temp1[temp1!=0])
-            temp2 = np.subtract(np.full((1,length),oo),a) #temp = x - [x]
-            temp2 = np.append(temp2[:,0:i],temp2[:,i+1:length])
-            temp2 = reduce(lambda a,b: a*b ,temp2)
-            L = temp2/temp1
-            L *= b[:,i] ; sum += L
-        Li += [sum]
-        #print(Li)
-    return Li
-
-
 up_path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary.png"
 img = cv2.imread(up_path,cv2.IMREAD_GRAYSCALE )
 down__path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary.png"
@@ -30,7 +11,16 @@ down__path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-
 img2 = cv2.imread(down__path,cv2.IMREAD_GRAYSCALE )
 #cv2.waitKey(0)
 
-
+def func(x_ar,y_ar):
+    res = []
+    enumer = list(enumerate(x_ar))[1:]
+    for (i,j) in enumer:
+        if i % 10 == 0 :
+            m = (y_ar[i]-y_ar[i-10])/(x_ar[i]-x_ar[i-10])
+            plt.plot([x_ar[i],x_ar[i-10]],[y_ar[i],y_ar[i-10]])
+            k = y_ar[i] - m*x_ar[i]
+            res += [[m,k]]
+    return res 
 up_plane=[]
 down_plane=[]
 #print(img.shape)
@@ -55,27 +45,28 @@ for x in range(width):
 #########up###########
 x = [] ; y = []
 for i,j  in (up_plane) : # mapping x -> y 
-    if i % 10 == 0 :
+    if i % 1 == 0 :
         x += [i/10]
-        y += [j+30]
+        y += [(-j+250)/10]
 
-#x = list(map(lambda i : i - x[0] , x)) #左移
-x_res = np.arange(x[0],x[len(x)-1]+1)
-y_res = lagrange(x_res, x,y,len(x))
-#plt.plot(x, y)
-plt.plot(x_res, y_res)
-
+x = list(map(lambda i : i - x[0] , x)) #左移
+print(func(x,y))
+#plt.plot(x,y)
 
 ##########down##########
 x = [] ; y = []
 for i,j  in (down_plane) : # mapping x -> y 
-    if i % 10 == 0 :
+    if i % 1 == 0 :
         x += [i/10]
-        y += [j]
-x_res = np.arange(x[0],x[len(x)-1]+1)
-y_res = lagrange(x_res, x,y,len(x))
-#plt.plot(x, y)
-plt.plot(x_res, y_res)
+        y += [(-j+250)/10]
+x = list(map(lambda i : i - x[0] , x)) #左移
+plt.plot([x[len(x)-10],x[len(x)-1]],[y[len(x)-10],y[len(x)-1]])
+x = list(map(lambda i : i - x[0] , x)) #左移
+print(func(x,y))
+
+
+
+
 
 plt.show()
 print("HELLO")
