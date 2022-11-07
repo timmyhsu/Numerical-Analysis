@@ -50,9 +50,8 @@ for i,j  in (up_plane) : # mapping x -> y
         y += [(-j+250)/10]
 
 x = list(map(lambda i : i - x[0] , x)) #左移
-print(func(x,y))
-#plt.plot(x,y)
 
+print("up: ",*func(x,y),sep='\n')
 ##########down##########
 x = [] ; y = []
 for i,j  in (down_plane) : # mapping x -> y 
@@ -62,7 +61,7 @@ for i,j  in (down_plane) : # mapping x -> y
 x = list(map(lambda i : i - x[0] , x)) #左移
 plt.plot([x[len(x)-10],x[len(x)-1]],[y[len(x)-10],y[len(x)-1]])
 x = list(map(lambda i : i - x[0] , x)) #左移
-print(func(x,y))
+print("down: ",*func(x,y),sep='\n')
 
 
 

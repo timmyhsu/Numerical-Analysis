@@ -23,9 +23,9 @@ def lagrange(x ,x_ar ,y_ar,length ):
     return Li
 
 
-up_path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary.png"
+up_path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary2.png"
 img = cv2.imread(up_path,cv2.IMREAD_GRAYSCALE )
-down__path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary.png"
+down__path = "C:\\Users\\timmy\\Documents\\Coding_Plarground\\vscode\\Numerical-Analysis\\airplane_4\\binary2.png"
 #cv2.imshow("windows",img)
 img2 = cv2.imread(down__path,cv2.IMREAD_GRAYSCALE )
 #cv2.waitKey(0)

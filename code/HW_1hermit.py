@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from functools import reduce
 
-x  = [-8.2947705,-7.018728,4.33613599,-2.3654881,7.63990620]
-y  = [-0.7033667,0.0977579,0.6878709,0.4335587,3.6101307]
-y_ = [1.0907,0.3125,0.2491176,0.01639344,1.1594202]
+x  = [-8.2947705,-7.018728,4.33613599,-2.3654881,7.63990620] #x
+y  = [-0.7033667,0.0977579,0.6878709,0.4335587,3.6101307] #y
+y_ = [1.0907,0.3125,0.2491176,0.01639344,1.1594202] #y'
 
 def hermitpoly(x_ar , y_ar , y_):
     res = np.poly1d([0])
@@ -22,7 +22,8 @@ def hermitpoly(x_ar , y_ar , y_):
     print(res)
     return res
 
-x_res = np.linspace(-10,10,1)
+
+x_res = np.linspace(-8,7,1)
 y_res = hermitpoly(x,y,y_)(x_res)
 plt.plot(x_res,y_res)
 plt.show()
