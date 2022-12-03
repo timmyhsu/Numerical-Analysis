@@ -1,0 +1,679 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Saturday, December 03, 2022 21:48:08}
+%TCIDATA{LastRevised=Sunday, December 04, 2022 02:10:40}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+%TCIDATA{ComputeDefs=
+%$b=6$
+%$a=-8.2$
+%$q(x)=-9.\,\allowbreak 502\,1\times 10^{-7}x^{7}+4.\,\allowbreak
+%717\,3\times 10^{-6}x^{6}+1.\,\allowbreak 712\,9\times
+%10^{-4}x^{5}+5.\,\allowbreak 213\,7\times 10^{-4}x^{4}-2.\,\allowbreak
+%073\,1\times 10^{-3}x^{3}-4.\,\allowbreak 298\,6\times
+%10^{-3}x^{2}+3.\,\allowbreak 018\,7\times 10^{-2}x-1.\,\allowbreak 297\,8$
+%$p(x)=\bigskip -7.\,\allowbreak 634\,4\times 10^{-9}x^{9}-2.\,\allowbreak
+%736\,9\times 10^{-7}x^{8}-5.\,\allowbreak 319\,9\times
+%10^{-7}x^{7}+2.\,\allowbreak 444\,3\times 10^{-5}x^{6}+1.\,\allowbreak
+%677\,6\times 10^{-4}x^{5}-9.\,\allowbreak 197\,7\times
+%10^{-5}x^{4}-2.\,\allowbreak 736\,9\times 10^{-3}x^{3}-2.\,\allowbreak
+%483\,6\times 10^{-3}x^{2}+0.030\,13x+0.493\,56$
+%$\bigskip f(x)=p(x)-q(x)$
+%$h=\frac{b-a}{n+2}$
+%$g(j)=a+(j+1)h$
+%$n=40$
+%$r(x)=\frac{1}{2}f(x)$
+%$k(x)=f(x)\sqrt{4+f^{\prime }(x)^{2}}$
+%$l(x)=5.\,\allowbreak 828\,4\times 10^{-17}x^{18}+4.\,\allowbreak
+%178\,9\times 10^{-15}\allowbreak x^{17}+6.\,\allowbreak 852\times
+%10^{-14}x^{16}-5.\,\allowbreak 301\,2\times 10^{-13}\allowbreak
+%x^{15}-1.\,\allowbreak 056\,9\times 10^{-11}x^{14}+2.\,\allowbreak
+%779\,7\times 10^{-11}\allowbreak x^{13}+7.\,\allowbreak 320\,3\times
+%10^{-10}x^{12}-3.\,\allowbreak 166\,6\times 10^{-10}\allowbreak
+%x^{11}-2.\,\allowbreak 573\,3\times 10^{-8}x^{10}-4.\,\allowbreak
+%766\,1\times 10^{-8}\allowbreak x^{9}-5.\,\allowbreak 281\,3\times
+%10^{-7}x^{8}+2.\,\allowbreak 297\,6\times 10^{-6}\allowbreak
+%x^{7}+6.\,\allowbreak 888\,9\times 10^{-5}x^{6}-1.\,\allowbreak 498\,7\times
+%10^{-5}\allowbreak x^{5}-2.\,\allowbreak 194\,1\times
+%10^{-3}x^{4}-2.\,\allowbreak 378\,5\times 10^{-3}\allowbreak
+%x^{3}+6.\,\allowbreak 502\,8\times 10^{-3}x^{2}-2.\,\allowbreak 042\,2\times
+%10^{-4}\allowbreak x+3.\,\allowbreak 209\,1$
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\subsection{$q(x)=-9.\,\allowbreak 502\,1\times 10^{-7}x^{7}+4.\,\allowbreak
+717\,3\times 10^{-6}x^{6}+1.\,\allowbreak 712\,9\times
+10^{-4}x^{5}+5.\,\allowbreak 213\,7\times 10^{-4}x^{4}-2.\,\allowbreak
+073\,1\times 10^{-3}x^{3}-4.\,\allowbreak 298\,6\times
+10^{-3}x^{2}+3.\,\allowbreak 018\,7\times 10^{-2}x-1.\,\allowbreak
+297\,8\allowbreak $}
+
+\subsection{$p(x)=-7.\,\allowbreak 634\,4\times 10^{-9}x^{9}-2.\,\allowbreak
+736\,9\times 10^{-7}x^{8}-5.\,\allowbreak 319\,9\times
+10^{-7}x^{7}+2.\,\allowbreak 444\,3\times 10^{-5}x^{6}+1.\,\allowbreak
+677\,6\times 10^{-4}x^{5}-9.\,\allowbreak 197\,7\times
+10^{-5}x^{4}-2.\,\allowbreak 736\,9\times 10^{-3}x^{3}-2.\,\allowbreak
+483\,6\times 10^{-3}x^{2}+0.030\,13x+0.493\,56\allowbreak $}
+
+\subsection{$\protect\bigskip f(x)=p(x)-q(x)=\allowbreak -7.\,\allowbreak
+634\,4\times 10^{-9}x^{9}-2.\,\allowbreak 736\,9\times
+10^{-7}x^{8}+4.\,\allowbreak 182\,2\times 10^{-7}\allowbreak
+x^{7}+1.\,\allowbreak 972\,6\times 10^{-5}x^{6}-3.\,\allowbreak 53\times
+10^{-6}x^{5}-6.\,\allowbreak 133\,5\times 10^{-4}\allowbreak
+x^{4}-6.\,\allowbreak 638\times 10^{-4}x^{3}+1.\,\allowbreak 815\times
+10^{-3}x^{2}-5.\,\allowbreak 7\times 10^{-5}x+1.\,\allowbreak
+791\,4\allowbreak $}
+
+\subsection{$f^{(4)}(x)=\allowbreak -2.\,\allowbreak 308\,6\times
+10^{-5}x^{5}-4.\,\allowbreak 598\,0\times 10^{-4}x^{4}+\allowbreak
+3.\,\allowbreak 513\times 10^{-4}x^{3}+7.\,\allowbreak 101\,3\times
+10^{-3}x^{2}-4.\,\allowbreak 236\times 10^{-4}\allowbreak x-0.014\,72$%
+\protect\FRAME{dtbpFX}{4.4996in}{3in}{0pt}{}{}{Plot}{\special{language
+"Scientific Word";type "MAPLEPLOT";width 4.4996in;height 3in;depth
+0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
+"MuPAD";xmin "-5.001000";xmax "5.001000";xviewmin "-5.001000";xviewmax
+"5.001000";yviewmin "-0.154929";yviewmax
+"0.5";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{x};var1name
+\TEXUX{$x$};function \TEXUX{$-2.\,\allowbreak 308\,6\times
+10^{-5}x^{5}-4.\,\allowbreak 598\,0\times 10^{-4}x^{4}+\allowbreak
+3.\,\allowbreak 513\times 10^{-4}x^{3}+7.\,\allowbreak 101\,3\times
+10^{-3}x^{2}-4.\,\allowbreak 236\times 10^{-4}\allowbreak
+x-0.014\,72$};linecolor "black";linestyle 1;pointstyle "point";linethickness
+1;lineAttributes "Solid";var1range "-5.001000,5.001000";num-x-gridlines
+100;curveColor "[flat::RGB:0000000000]";curveStyle "Line";VCamFile
+'RMBQXF12.xvz';valid_file "T";tempfilename
+'RMBQX20G.wmf';tempfile-properties "XPR";}}}
+
+\subsection{\protect\bigskip $f^{(4)}(2.\,\allowbreak 804\,1)=\allowbreak
+1.\,\allowbreak 524\,4\times 10^{-2}$}
+
+\subsection{$f^{(4)}(2.\,\allowbreak 976\,2\times 10^{-2})=\allowbreak
+-1.\,\allowbreak 472\,7\times 10^{-2}$}
+
+\subsection{$f^{(4)}(-\allowbreak 2.\,\allowbreak 744\,2)=\allowbreak
+1.\,\allowbreak 017\,7\times 10^{-2}$}
+
+\subsection{$f^{(4)}(-16.\,\allowbreak 023\allowbreak )=\allowbreak
+-5.\,\allowbreak 554\,6$}
+
+$%
+\begin{array}{cc}
+x & y \\ 
+2.\,\allowbreak 804\,1 & 1.\,\allowbreak 524\,4\times 10^{-2} \\ 
+-\allowbreak 2.\,\allowbreak 744\,2 & \allowbreak 1.\,\allowbreak
+017\,7\times 10^{-2}%
+\end{array}%
+$
+
+\subsection{$f^{(5)}(x)=\allowbreak -1.\,\allowbreak 154\,3\times
+10^{-4}x^{4}-1.\,\allowbreak 839\,2\times 10^{-3}x^{3}+\allowbreak
+1.\,\allowbreak 053\,9\times 10^{-3}x^{2}+1.\,\allowbreak 420\,3\times
+10^{-2}x-4.\,\allowbreak 236\times 10^{-4}\allowbreak =0$, Solution is: $%
+2.\,\allowbreak 804\,1,2.\,\allowbreak 976\,2\times 10^{-2},-\allowbreak
+2.\,\allowbreak 744\,2,-16.\,\allowbreak 023\allowbreak $}
+
+\subsection{$a=-8.2$}
+
+\subsection{$b=6$}
+
+\bigskip
+
+\bigskip
+
+==============================================================1=============================================================
+
+\subsection{ $\protect\int_{a}^{b}(p(x)-q(x))dx=\allowbreak 23.\,\allowbreak
+520$}
+
+\subsection{$h=\frac{b-a}{n+2}$}
+
+\section{$g(j)=a+(j+1)h$}
+
+\subsection{$\protect\int_{a}^{b}(p(x)-q(x))dx\approx \frac{4}{3}%
+h\sum\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))$}
+
+Theoretrical error :$%
+\begin{array}{cc}
+x & y \\ 
+2.\,\allowbreak 804\,1 & 1.\,\allowbreak 524\,4\times 10^{-2}%
+\end{array}%
+$
+
+\subsection{$\frac{7h^{4}}{90}(b-a)\times 1.\,\allowbreak 524\,4\times
+10^{-2}=\allowbreak 2.\,\allowbreak 922\,2\times 10^{-3}$}
+
+\bigskip 
+
+\subsection{\protect\bigskip $n=20$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=\allowbreak
+24.\,\allowbreak 967$}
+
+\subsection{$E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx\allowbreak \allowbreak
+-S(n)=23.\,\allowbreak 520-24.\,\allowbreak 967=\allowbreak -1.\,\allowbreak
+447$}
+
+\subsection{$n=40$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=\allowbreak
+24.\,\allowbreak 382$}
+
+\subsection{$E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx\allowbreak
+-S(n)=23.\,\allowbreak 520-\allowbreak \allowbreak 24.\,\allowbreak
+382=\allowbreak -0.862\,$}
+
+\bigskip
+
+\subsection{$n=60$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=24.\,\allowbreak 124$}
+
+\subsection{$E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx\allowbreak
+-S(n)=\allowbreak \allowbreak 23.\,\allowbreak 520-24.\,\allowbreak
+124=-\allowbreak 0.604\,$}
+
+\bigskip
+
+\subsection{$n=80$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=23.\,\allowbreak 983$}
+
+\subsection{\protect\bigskip $E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx%
+\allowbreak -S(n)=23.\,\allowbreak 520-23.\,\allowbreak 983=-\allowbreak
+0.463\,$}
+
+\bigskip
+
+\subsection{$n=160$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=23.\,\allowbreak 759$}
+
+\subsection{$E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx\allowbreak
+-S(n)=23.\,\allowbreak 520-23.\,\allowbreak 759=-\allowbreak 0.239$}
+
+\bigskip
+
+\subsection{$n=10000000$}
+
+\subsection{$S(n)=\frac{4}{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))-f(g(4j+1))+2f(g(4j+2)))=\allowbreak
+23.\,\allowbreak 559$}
+
+\subsection{$E(n)=\protect\int_{a}^{b}(p(x)-q(x))dx-S(n\allowbreak
+=23.\,\allowbreak 520-\allowbreak 23.\,\allowbreak 559=-\allowbreak 0.039\,$}
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip $x=\ln (%
+\begin{array}{c}
+20 \\ 
+40 \\ 
+60 \\ 
+80 \\ 
+160%
+\end{array}%
+)=\allowbreak x=%
+\begin{array}{c}
+2.\,\allowbreak 995\,7 \\ 
+3.\,\allowbreak 688\,9 \\ 
+4.\,\allowbreak 094\,3 \\ 
+4.\,\allowbreak 382 \\ 
+5.\,\allowbreak 075\,2%
+\end{array}%
+\allowbreak $
+
+$y=\ln (%
+\begin{array}{c}
+\allowbreak 24.\,\allowbreak 967 \\ 
+24.\,\allowbreak 382 \\ 
+24.\,\allowbreak 124 \\ 
+23.\,\allowbreak 983 \\ 
+23.\,\allowbreak 759%
+\end{array}%
+)=\allowbreak y=%
+\begin{array}{c}
+3.\,\allowbreak 217\,6 \\ 
+3.\,\allowbreak 193\,8 \\ 
+3.\,\allowbreak 183\,2 \\ 
+3.\,\allowbreak 177\,3 \\ 
+3.\,\allowbreak 168\,0%
+\end{array}%
+\allowbreak $
+
+$%
+\begin{array}{cc}
+x & y \\ 
+2.\,\allowbreak 995\,7 & 3.\,\allowbreak 217\,6 \\ 
+3.\,\allowbreak 688\,9 & 3.\,\allowbreak 193\,8 \\ 
+4.\,\allowbreak 094\,3 & 3.\,\allowbreak 183\,2 \\ 
+4.\,\allowbreak 382 & 3.\,\allowbreak 177\,3 \\ 
+5.\,\allowbreak 075\,2 & 3.\,\allowbreak 168\,0%
+\end{array}%
+$, Polynomial fit: $y=3.\,\allowbreak 284\,9-2.\,\allowbreak 393\,7\times
+10^{-2}\allowbreak x$\FRAME{dtbpFX}{4.4996in}{3in}{0pt}{}{}{Plot}{\special%
+{language "Scientific Word";type "MAPLEPLOT";width 4.4996in;height 3in;depth
+0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
+"MuPAD";xmin "1";xmax "6";xviewmin "1";xviewmax "6";yviewmin "3.05";yviewmax
+"3.28";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patchnogrid";axesstyle "normal";axestips FALSE;xis \TEXUX{x};var1name
+\TEXUX{$x$};function
+\TEXUX{$\MATRIX{2,5}{c}\VR{,,c,,,}{,,c,,,}{,,,,,}\HR{,,,,,}\CELL{2.\,%
+\allowbreak 995\,7}\CELL{3.\,\allowbreak 217\,6}\CELL{3.\,\allowbreak
+688\,9}\CELL{3.\,\allowbreak 193\,8}\CELL{4.\,\allowbreak
+094\,3}\CELL{3.\,\allowbreak 183\,2}\CELL{4.\,\allowbreak
+382}\CELL{3.\,\allowbreak 177\,3}\CELL{5.\,\allowbreak
+075\,2}\CELL{3.\,\allowbreak 168\,0}$};linecolor "black";linestyle
+1;pointplot TRUE;pointstyle "circle";linethickness 1;lineAttributes
+"Solid";curveColor "[flat::RGB:0000000000]";curveStyle "Point";function
+\TEXUX{$3.\,\allowbreak 284\,9-2.\,\allowbreak 393\,7\times
+10^{-2}\allowbreak x$};linecolor "black";linestyle 1;pointstyle
+"point";linethickness 1;lineAttributes "Solid";var1range
+"1,6";num-x-gridlines 100;curveColor "[flat::RGB:0000000000]";curveStyle
+"Line";VCamFile 'RMBQDQ0T.xvz';valid_file "T";tempfilename
+'RMBQDQ0B.wmf';tempfile-properties "XPR";}}
+
+==============================================================2=============================================================
+
+\subsection{$\protect\int_{a}^{b}\protect\pi r(x)^{2}dx=\frac{\protect\pi }{4%
+}\protect\int_{a}^{b}f(x)^{2}dx=\allowbreak 9.\,\allowbreak 961\protect\pi $}
+
+\subsection{$\frac{\protect\pi }{4}\protect\int_{a}^{b}f(x)^{2}dx\approx 
+\frac{\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))^{2}-f(g(4j+1))^{2}+2f(g(4j+2))^{2})$}
+
+\bigskip Theoretrical error :$%
+\begin{array}{cc}
+x & y \\ 
+2.\,\allowbreak 804\,1 & 1.\,\allowbreak 524\,4\times 10^{-2}%
+\end{array}%
+$
+
+\subsection{$\frac{\protect\pi }{4}\frac{7h^{4}}{90}(b-a)\times
+3.\,\allowbreak 210\,6=\allowbreak 0.153\,86\protect\pi $ }
+
+\subsection{$f(x)^{2}=\allowbreak \left( 7.\,\allowbreak 634\,4\times
+10^{-9}x^{9}+2.\,\allowbreak 736\,9\times 10^{-7}x^{8}-4.\,\allowbreak
+182\,2\times 10^{-7}x^{7}-1.\,\allowbreak 972\,6\times
+10^{-5}x^{6}+3.\,\allowbreak 53\times 10^{-6}x^{5}+6.\,\allowbreak
+133\,5\times 10^{-4}x^{4}+6.\,\allowbreak 638\times
+10^{-4}x^{3}-1.\,\allowbreak 815\times 10^{-3}x^{2}+5.\,\allowbreak 7\times
+10^{-5}x-1.\,\allowbreak 791\,4\right) ^{2}\allowbreak $ : }
+
+\subsection{$l(x)=5.\,\allowbreak 828\,4\times
+10^{-17}x^{18}+4.\,\allowbreak 178\,9\times 10^{-15}\allowbreak
+x^{17}+6.\,\allowbreak 852\times 10^{-14}x^{16}-5.\,\allowbreak 301\,2\times
+10^{-13}\allowbreak x^{15}-1.\,\allowbreak 056\,9\times
+10^{-11}x^{14}+2.\,\allowbreak 779\,7\times 10^{-11}\allowbreak
+x^{13}+7.\,\allowbreak 320\,3\times 10^{-10}x^{12}-3.\,\allowbreak
+166\,6\times 10^{-10}\allowbreak x^{11}-2.\,\allowbreak 573\,3\times
+10^{-8}x^{10}-4.\,\allowbreak 766\,1\times 10^{-8}\allowbreak
+x^{9}-5.\,\allowbreak 281\,3\times 10^{-7}x^{8}+2.\,\allowbreak 297\,6\times
+10^{-6}\allowbreak x^{7}+6.\,\allowbreak 888\,9\times
+10^{-5}x^{6}-1.\,\allowbreak 498\,7\times 10^{-5}\allowbreak
+x^{5}-2.\,\allowbreak 194\,1\times 10^{-3}x^{4}-2.\,\allowbreak 378\,5\times
+10^{-3}\allowbreak x^{3}+6.\,\allowbreak 502\,8\times
+10^{-3}x^{2}-2.\,\allowbreak 042\,2\times 10^{-4}\allowbreak
+x+3.\,\allowbreak 209\,1$}
+
+\subsection{$l^{(4)}(x)=\allowbreak 4.\,\allowbreak 280\,4\times
+10^{-12}x^{14}+2.\,\allowbreak 387\,0\times 10^{-10}\allowbreak
+x^{13}+2.\,\allowbreak 993\,0\times 10^{-9}x^{12}-1.\,\allowbreak
+736\,7\times 10^{-8}\allowbreak x^{11}-2.\,\allowbreak 539\,1\times
+10^{-7}x^{10}+4.\,\allowbreak 770\,0\times 10^{-7}\allowbreak
+x^{9}+8.\,\allowbreak 696\,5\times 10^{-6}x^{8}-2.\,\allowbreak 507\,9\times
+10^{-6}x^{7}-\allowbreak 1.\,\allowbreak 296\,9\times
+10^{-4}x^{6}-1.\,\allowbreak 441\,3\times 10^{-4}x^{5}-\allowbreak
+8.\,\allowbreak 872\,6\times 10^{-4}x^{4}+1.\,\allowbreak 930\,0\times
+10^{-3}x^{3}+0.024\,8\allowbreak x^{2}-1.\,\allowbreak 798\,4\times
+10^{-3}x-5.\,\allowbreak 265\,8\times 10^{-2}$}
+
+\subsection{$l^{(5)}(x)=\allowbreak 5.\,\allowbreak 992\,5\times
+10^{-11}x^{13}+3.\,\allowbreak 103\,1\times 10^{-9}\allowbreak
+x^{12}+3.\,\allowbreak 591\,5\times 10^{-8}x^{11}-1.\,\allowbreak
+910\,3\times 10^{-7}\allowbreak x^{10}-2.\,\allowbreak 539\,1\times
+10^{-6}x^{9}+4.\,\allowbreak 293\,0\times 10^{-6}\allowbreak
+x^{8}+6.\,\allowbreak 957\,2\times 10^{-5}x^{7}-1.\,\allowbreak 755\,6\times
+10^{-5}\allowbreak x^{6}-7.\,\allowbreak 781\,7\times
+10^{-4}x^{5}-7.\,\allowbreak 206\,3\times 10^{-4}x^{4}-\allowbreak
+3.\,\allowbreak 549\times 10^{-3}x^{3}+5.\,\allowbreak 790\,0\times
+10^{-3}x^{2}+0.049\,6\allowbreak x-1.\,\allowbreak 798\,4\times 10^{-3}=0$,
+Solution is: $5.\,\allowbreak 450\,6,4.\,\allowbreak 735\,4+\allowbreak
+2.\,\allowbreak 080\,0i,4.\,\allowbreak 735\,4-\allowbreak 2.\,\allowbreak
+080\,0i,2.\,\allowbreak 793\,9,\allowbreak 3.\,\allowbreak 610\,9\times
+10^{-2},-0.172\,68+\allowbreak 2.\,\allowbreak
+723\,8i,-0.172\,68-\allowbreak 2.\,\allowbreak 723\,8i,-2.\,\allowbreak
+744\,5,-\allowbreak 4.\,\allowbreak 604\,3+2.\,\allowbreak 316\,5\allowbreak
+i,-4.\,\allowbreak 604\,3-2.\,\allowbreak 316\,5\allowbreak
+i,-5.\,\allowbreak 806\,0,-21.\,\allowbreak 943,-\allowbreak
+29.\,\allowbreak 487$}
+
+\subsection{$l(5.\,\allowbreak 450\,6)=\allowbreak 2.\,\allowbreak 281\,9$}
+
+\subsection{$l(2.\,\allowbreak 793\,9)=\allowbreak 3.\,\allowbreak 103\,9$}
+
+\subsection{$l(3.\,\allowbreak 610\,9\times 10^{-2})=\allowbreak
+3.\,\allowbreak 209\,1$}
+
+\subsection{$l(-2.\,\allowbreak 744\,5)=\allowbreak 3.\,\allowbreak 210\,6$}
+
+\subsection{$l(-5.\,\allowbreak 806\,0)=\allowbreak 2.\,\allowbreak 807\,6$}
+
+\subsection{$n=20$}
+
+\subsection{$S(n)=\frac{\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))^{2}-f(g(4j+1))^{2}+2f(g(4j+2))^{2})=%
+\allowbreak 10.\,\allowbreak 338\protect\pi $ = $32.\,\allowbreak 478$}
+
+\subsection{$E(n)=\frac{\protect\pi }{4}\protect\int%
+_{a}^{b}f(x)^{2}dx-S(n)=9.\,\allowbreak 961\protect\pi -10.\,\allowbreak 338%
+\protect\pi =\allowbreak -0.377\,\protect\pi =-1.\,\allowbreak 184\,4$}
+
+\subsection{$\frac{\protect\pi }{4}\frac{7h^{4}}{90}(b-a)\times
+3.\,\allowbreak 210\,6=\allowbreak 0.153\,86\protect\pi =\allowbreak
+0.483\,37$}
+
+\bigskip
+
+\subsection{$n=40$}
+
+\subsection{$S(n)=\frac{\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))^{2}-f(g(4j+1))^{2}+2f(g(4j+2))^{2})=%
+\allowbreak 10.\,\allowbreak 233\protect\pi =\allowbreak 32.\,\allowbreak
+148 $}
+
+\subsection{$E(n)=\frac{\protect\pi }{4}\protect\int_{a}^{b}f(x)^{2}dx-S(n)=%
+\allowbreak 9.\,\allowbreak 961\protect\pi -10.\,\allowbreak 233\protect\pi %
+=\allowbreak -0.272\,\protect\pi =\allowbreak -0.854\,51$}
+
+\subsection{\protect\bigskip $\frac{\protect\pi }{4}\frac{7h^{4}}{90}%
+(b-a)\times 3.\,\allowbreak 210\,6=\allowbreak 0.153\,86\protect\pi %
+=\allowbreak 1.\,\allowbreak 158\,3\times 10^{-2}\protect\pi =\allowbreak
+3.\,\allowbreak 638\,9\times 10^{-2}$}
+
+\bigskip
+
+\subsection{$n=80$}
+
+\subsection{$S(n)=\frac{\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))^{2}-f(g(4j+1))^{2}+2f(g(4j+2))^{2})=%
+\allowbreak 10.\,\allowbreak 116\protect\pi $ = $31.\,\allowbreak 78$}
+
+\subsection{$E(n)=S(n)-\frac{\protect\pi }{4}\protect\int_{a}^{b}f(x)^{2}dx=%
+\allowbreak \allowbreak 10.\,\allowbreak 116\protect\pi -\allowbreak
+9.\,\allowbreak 961\protect\pi =\allowbreak 0.155\,\protect\pi =\allowbreak
+0.486\,95$}
+
+\bigskip
+
+\subsection{$n=160$}
+
+\subsection{$S(n)=\frac{\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2f(g(4j))^{2}-f(g(4j+1))^{2}+2f(g(4j+2))^{2})=%
+\allowbreak 10.\,\allowbreak 043\protect\pi =\allowbreak 31.\,\allowbreak
+551 $}
+
+\subsection{$E(n)=S(n)-\frac{\protect\pi }{4}\protect\int_{a}^{b}f(x)^{2}dx=%
+\allowbreak \allowbreak \allowbreak 10.\,\allowbreak 043\protect\pi %
+-\allowbreak 9.\,\allowbreak 961\protect\pi =\allowbreak 0.082\,\protect\pi %
+=\allowbreak 0.257\,61$}
+
+\bigskip $x=\ln (%
+\begin{array}{c}
+20 \\ 
+40 \\ 
+80 \\ 
+160%
+\end{array}%
+)=\allowbreak 
+\begin{array}{c}
+2.\,\allowbreak 995\,7 \\ 
+3.\,\allowbreak 688\,9 \\ 
+4.\,\allowbreak 382 \\ 
+5.\,\allowbreak 075\,2%
+\end{array}%
+\allowbreak $
+
+$y=\ln (%
+\begin{array}{c}
+32.\,\allowbreak 478 \\ 
+\allowbreak 32.\,\allowbreak 148 \\ 
+31.\,\allowbreak 78 \\ 
+\allowbreak 31.\,\allowbreak 551%
+\end{array}%
+)=\allowbreak 
+\begin{array}{c}
+3.\,\allowbreak 480\,6 \\ 
+3.\,\allowbreak 470\,4 \\ 
+3.\,\allowbreak 458\,8 \\ 
+3.\,\allowbreak 451\,6%
+\end{array}%
+\allowbreak $
+
+\bigskip $%
+\begin{array}{cc}
+x & y \\ 
+2.\,\allowbreak 995\,7 & 3.\,\allowbreak 480\,6 \\ 
+3.\,\allowbreak 688\,9 & 3.\,\allowbreak 470\,4 \\ 
+4.\,\allowbreak 094\,3 & 3.\,\allowbreak 458\,8 \\ 
+4.\,\allowbreak 382 & 3.\,\allowbreak 451\,6%
+\end{array}%
+$, Polynomial fit: $y=3.\,\allowbreak 544\,9-2.\,\allowbreak 099\,0\times
+10^{-2}\allowbreak x$\FRAME{dtbpFX}{4.4996in}{3in}{0pt}{}{}{Plot}{\special%
+{language "Scientific Word";type "MAPLEPLOT";width 4.4996in;height 3in;depth
+0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
+"MuPAD";xmin "2";xmax "5";xviewmin "2";xviewmax "5";yviewmin "2";yviewmax
+"4";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patchnogrid";axesstyle "normal";axestips FALSE;xis \TEXUX{x};var1name
+\TEXUX{$x$};function
+\TEXUX{$\MATRIX{2,4}{c}\VR{,,c,,,}{,,c,,,}{,,,,,}\HR{,,,,}\CELL{2.\,%
+\allowbreak 995\,7}\CELL{3.\,\allowbreak 480\,6}\CELL{3.\,\allowbreak
+688\,9}\CELL{3.\,\allowbreak 470\,4}\CELL{4.\,\allowbreak
+094\,3}\CELL{3.\,\allowbreak 458\,8}\CELL{4.\,\allowbreak
+382}\CELL{3.\,\allowbreak 451\,6}$};linecolor "black";linestyle 1;pointplot
+TRUE;pointstyle "circle";linethickness 1;lineAttributes "Solid";curveColor
+"[flat::RGB:0000000000]";curveStyle "Point";function \TEXUX{$3.\,\allowbreak
+544\,9-2.\,\allowbreak 099\,0\times 10^{-2}\allowbreak x$};linecolor
+"black";linestyle 1;pointstyle "point";linethickness 1;lineAttributes
+"Solid";var1range "2,5";num-x-gridlines 100;curveColor
+"[flat::RGB:0000000000]";curveStyle "Line";VCamFile
+'RMBQDQ0S.xvz';valid_file "T";tempfilename
+'RMBQDQ0C.wmf';tempfile-properties "XPR";}}
+
+==============================================================3=============================================================
+
+\bigskip
+
+\subsection{$\protect\int_{a}^{b}2\protect\pi r(x)ds=\protect\int_{a}^{b}%
+\protect\pi f(x)\frac{1}{2}\protect\sqrt{4+f^{\prime }(x)^{2}}dx=\frac{%
+\protect\pi }{2}\protect\int_{a}^{b}f(x)\protect\sqrt{4+f^{\prime }(x)^{2}}%
+dx=\allowbreak 74.\,\allowbreak 293$}
+
+\subsection{$ds=\protect\sqrt{dx^{2}+dy^{2}}=\protect\sqrt{1+\left( \frac{dy%
+}{dx}\right) ^{2}}dx=\protect\sqrt{1+r^{\prime }(x)^{2}}dx=\protect\sqrt{1+%
+\frac{1}{4}f^{\prime }(x)^{2}}dx=\frac{1}{2}\protect\sqrt{4+f^{\prime
+}(x)^{2}}dx$}
+
+\subsection{$k(x)=f(x)\protect\sqrt{4+f^{\prime }(x)^{2}}$}
+
+\bigskip
+
+\bigskip
+
+\subsection{$n=20$}
+
+\subsection{$S(n)=\frac{2\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2k(g(4j))-k(g(4j+1))+2\ast k(g(4j+2)))=79.\,\allowbreak
+106\allowbreak $}
+
+\subsection{$E(n)=S(n)-\protect\int_{a}^{b}\protect\pi f(x)\frac{1}{2}%
+\protect\sqrt{4+f^{\prime }(x)^{2}}dx=79.\,\allowbreak 106\allowbreak
+-\allowbreak \allowbreak 74.\,\allowbreak 293=\allowbreak 4.\,\allowbreak
+813 $}
+
+\bigskip
+
+\subsection{$n=40$}
+
+\subsection{$S(n)=\frac{2\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2k(g(4j))-k(g(4j+1))+2\ast k(g(4j+2)))=\allowbreak
+77.\,\allowbreak 073$}
+
+\subsection{$E(n)=S(n)-\protect\int_{a}^{b}\protect\pi f(x)\frac{1}{2}%
+\protect\sqrt{4+f^{\prime }(x)^{2}}dx=\allowbreak 77.\,\allowbreak
+073\allowbreak -\allowbreak \allowbreak 74.\,\allowbreak 293=\allowbreak
+2.\,\allowbreak 78$}
+
+\bigskip
+
+\subsection{$n=80$}
+
+\subsection{$S(n)=\frac{2\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2k(g(4j))-k(g(4j+1))+2\ast k(g(4j+2)))=\allowbreak
+75.\,\allowbreak 770$}
+
+\subsection{$E(n)=S(n)-\protect\int_{a}^{b}\protect\pi f(x)\frac{1}{2}%
+\protect\sqrt{4+f^{\prime }(x)^{2}}dx=\allowbreak 75.\,\allowbreak
+770-\allowbreak \allowbreak 74.\,\allowbreak 293=\allowbreak 1.\,\allowbreak
+477$}
+
+\bigskip
+
+\subsection{$n=160$}
+
+\subsection{$S(n)=\frac{2\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2k(g(4j))-k(g(4j+1))+2\ast k(g(4j+2)))=75.\,\allowbreak
+053\allowbreak $}
+
+\subsection{$E(n)=S(n)-\protect\int_{a}^{b}\protect\pi f(x)\frac{1}{2}%
+\protect\sqrt{4+f^{\prime }(x)^{2}}dx=\allowbreak 75.\,\allowbreak
+053\allowbreak -\allowbreak \allowbreak 74.\,\allowbreak 293=\allowbreak
+0.76 $}
+
+\bigskip
+
+\subsection{$n=320$}
+
+\subsection{$S(n)=\frac{2\protect\pi }{3}h\sum%
+\limits_{j=0}^{n/4}(2k(g(4j))-k(g(4j+1))+2\ast k(g(4j+2)))=\allowbreak
+74.\,\allowbreak 679$}
+
+\subsection{$E(n)=S(n)-\protect\int_{a}^{b}\protect\pi f(x)\frac{1}{2}%
+\protect\sqrt{4+f^{\prime }(x)^{2}}dx=\allowbreak 74.\,\allowbreak
+679\allowbreak -\allowbreak \allowbreak 74.\,\allowbreak 293=\allowbreak
+0.386\,$}
+
+\subsection{$x=\ln (%
+\protect\begin{array}{c}
+20\protect \\ 
+40\protect \\ 
+80\protect \\ 
+160\protect \\ 
+320%
+\protect\end{array}%
+)=\allowbreak 
+\protect\begin{array}{c}
+2.\,\allowbreak 995\,7\protect \\ 
+3.\,\allowbreak 688\,9\protect \\ 
+4.\,\allowbreak 382\protect \\ 
+5.\,\allowbreak 075\,2\protect \\ 
+5.\,\allowbreak 768\,3%
+\protect\end{array}%
+\allowbreak $}
+
+\subsection{$y=\ln (%
+\protect\begin{array}{c}
+79.\,\allowbreak 106\allowbreak \protect \\ 
+77.\,\allowbreak 073\protect \\ 
+\allowbreak 75.\,\allowbreak 770\protect \\ 
+75.\,\allowbreak 053\allowbreak \protect \\ 
+\allowbreak 74.\,\allowbreak 679%
+\protect\end{array}%
+)=\allowbreak 
+\protect\begin{array}{c}
+4.\,\allowbreak 370\,8\protect \\ 
+4.\,\allowbreak 344\,8\protect \\ 
+4.\,\allowbreak 327\,7\protect \\ 
+4.\,\allowbreak 318\,2\protect \\ 
+4.\,\allowbreak 313\,2%
+\protect\end{array}%
+\allowbreak $}
+
+\subsection{\protect\bigskip $%
+\protect\begin{array}{cc}
+x & y\protect \\ 
+2.\,\allowbreak 995\,7 & 4.\,\allowbreak 370\,8\protect \\ 
+3.\,\allowbreak 688\,9 & 4.\,\allowbreak 344\,8\protect \\ 
+4.\,\allowbreak 382 & 4.\,\allowbreak 327\,7\protect \\ 
+5.\,\allowbreak 075\,2 & 4.\,\allowbreak 318\,2\protect \\ 
+5.\,\allowbreak 768\,3 & 4.\,\allowbreak 313\,2%
+\protect\end{array}%
+$\protect\FRAME{dtbpFX}{4.4996in}{3in}{0pt}{}{}{Plot}{\special{language
+"Scientific Word";type "MAPLEPLOT";width 4.4996in;height 3in;depth
+0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
+"MuPAD";xmin "2";xmax "6";xviewmin "2";xviewmax "6";yviewmin "4";yviewmax
+"5";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patchnogrid";axesstyle "normal";axestips FALSE;xis \TEXUX{x};var1name
+\TEXUX{$x$};function
+\TEXUX{$\MATRIX{2,5}{c}\VR{,,c,,,}{,,c,,,}{,,,,,}\HR{,,,,,}\CELL{2.\,%
+\allowbreak 995\,7}\CELL{4.\,\allowbreak 370\,8}\CELL{3.\,\allowbreak
+688\,9}\CELL{4.\,\allowbreak 344\,8}\CELL{4.\,\allowbreak
+382}\CELL{4.\,\allowbreak 327\,7}\CELL{5.\,\allowbreak
+075\,2}\CELL{4.\,\allowbreak 318\,2}\CELL{5.\,\allowbreak
+768\,3}\CELL{4.\,\allowbreak 313\,2}$};linecolor "black";linestyle
+1;pointplot TRUE;pointstyle "circle";linethickness 1;lineAttributes
+"Solid";curveColor "[flat::RGB:0000000000]";curveStyle "Point";function
+\TEXUX{$4.\,\allowbreak 424\,6-2.\,\allowbreak 045\,7\times
+10^{-2}\allowbreak x$};linecolor "black";linestyle 1;pointstyle
+"point";linethickness 1;lineAttributes "Solid";var1range
+"2,6";num-x-gridlines 100;curveColor "[flat::RGB:0000000000]";curveStyle
+"Line";VCamFile 'RMBQDQ0R.xvz';valid_file "T";tempfilename
+'RMBQDQ0D.wmf';tempfile-properties "XPR";}}, Polynomial fit: $%
+y=4.\,\allowbreak 424\,6-2.\,\allowbreak 045\,7\times 10^{-2}\allowbreak x$}
+
+\end{document}
